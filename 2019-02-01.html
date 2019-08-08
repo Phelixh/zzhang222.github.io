@@ -8,25 +8,25 @@
 
 <head>
     <meta charset="utf-8">
-    <title>找工总结--投向巨硬 </title>
-    <meta name="description" content="Han You's website">
-    <meta name="keywords" content="Jekyll, theme, responsive, template, CityU, Han You">
+    <title>Existence proof using weak convergence </title>
+    <meta name="description" content="Zhen's website">
+    <meta name="keywords" content="Jekyll, theme, responsive, template, Brown, Zhen Zhang">
 
 
     <!-- Open Graph -->
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Han You's site">
-    <meta property="og:description" content="Han You's website">
-    <meta property="og:url" content="https://john-you.github.io">
-    <meta property="og:site_name" content="Han You's site">
+    <meta property="og:title" content="Zhen's site">
+    <meta property="og:description" content="Zhen's website">
+    <meta property="og:url" content="https://zzhang222.github.io">
+    <meta property="og:site_name" content="Zhen's site">
 
 
 
 
 
-    <link href="js/feed.xml" type="application/atom+xml" rel="alternate" title="Han You's site Feed">
-    <link rel="canonical" href="https://john-you.github.io">
+    <link href="js/feed.xml" type="application/atom+xml" rel="alternate" title="Zhen's site Feed">
+    <link rel="canonical" href="https://zzhang222.github.io">
 
     <!-- http://t.co/dKP3o1e -->
     <meta name="HandheldFriendly" content="True">
@@ -50,7 +50,15 @@
 
     <!-- Modernizr -->
     <script src="js/modernizr-2.7.1.custom.min.js"></script>
-
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+                           tex2jax: {
+                           skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                           inlineMath: [['$','$']]
+                           }
+                           });
+        </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 </head>
 
@@ -60,23 +68,15 @@
 
     <div class="navigation-wrapper">
         <div class="site-name">
-            <a href="https://john-you.github.io">Han You's site</a>
+            <a href="https://zzhang222.github.io">Zhen's site</a>
         </div><!-- /.site-name -->
         <div class="top-navigation">
             <div class="navbar">
                 <a href="./index.html">Home</a>
                 <a href="./project.html">Projects</a>
                 <a href="./blog.html">Blog</a>
-                <div class="dropdown">
-                    <button class="dropbtn"><b>MY STORIES </b>
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="./bio.html">Biography</a>
-                        <a href="./photo.html">Photography</a>
-                        <a href="./sing.html">Singing</a>
-                    </div>
-                </div>
+                <a href="./contact.html">Contact</a>
+                <a href="./cv.pdf">Resume</a>
                 <a href="./HanYouCV.pdf">Resume</a>
             </div>
         </div><!-- /.top-navigation -->
@@ -84,36 +84,43 @@
 
 
     <div class="image-wrap">
-        <img src="img/landscape.jpg" alt=" feature image">
+        <img src="img/landscape2.png" alt=" feature image">
 
     </div><!-- /.image-wrap -->
 
 
     <div id="main" role="main">
         <div class="article-author-side">
-
-            <img src="img/head.jpg" class="bio-photo" alt="Han You bio photo"></a>
-
-            <h3>Han You</h3>
-            <p>Experiences bring wisdom</p>
-
-            <a href="https://github.com/John-YOU" class="author-social" target="_blank"><img class="iconimg" src="img/github-icon.png">
-                Github</a>
-
-            <a href="mailto:yhlfc@hotmail.com" class="author-social" target="_blank"><img class="iconimg" src="img/email-icon.png">
-                Email</a>
-
-
-        </div>
+            
+            <img src="img/zhen.jpeg" class="bio-photo" alt="Zhen Zhang bio photo"></a>
+                
+                <h3>Zhen Zhang</h3>
+                <p>自信可改變未來</p>
+                
+                
+                
+                
+                
+                <a href="https://github.com/zzhang222" class="author-social" target="_blank"><img class="iconimg" src="img/github-icon.png"> Github</a>
+                
+                <a href="mailto:zhen_zhang1@brown.edu" class="author-social" target="_blank"><img class="iconimg" src="img/email-icon.png"> Email</a>
+                
+                <a href="https://www.linkedin.com/in/臻-张-9a3220110/" class="author-social" target="_blank"><img class="iconimg" src="./img/link-icon.png"> LinkedIn</a>
+                
+                
+                </div>
         <article>
             <h1></h1>
             <div class="article-wrap">
-                <h3> 找工总结--投向巨硬 </h3>
+                <h3> Existence proof using convergence </h3>
                 <hr />
-                <p>2019/02/01，于赣江边</p><br>
-                <p>周二面完被拖了四个月的亚麻，结束了最后一个面试，找工季也算正式告一段落。还是激动的，在二十一岁这年终于实现了经济独立。但也有失落，
-                    因为没有更多的可能性了。写下这篇总结，尽量客观地记录这半年的求职经历，也希望可以帮到后人。
-                </p><br>
+                <p>This is my first blog. I'm writing this blog to test using LaTeX in github pages.  Another reason for writing this blog is that I'm taking my Prelim soon, so I'd like to review some of the materials learned in the previous two semesters. More blogs will come out on this and other topics.
+                </p> In general, there are two different kinds of tools to prove the existence of solution to a given equation: fixed point theorems and weak convergence. (There might probably be more but these are what I've learnt.) Fixed point theorems typically gives us gaurantee of the existence of a solution to an equation $f(x)=x$, $x\in X$.<br>
+                To use a fixed point theorem, we need to verify its conditions: $$d(f(x),f(y))\leq qd(x,y), q\leq1$$ for Banach fixed point theorem and $$\text{f continous compact, } \{x\in X:x=\lambda Tx \text{ for some }\lambda \in[0,1]\} \text{ is bounded}$$
+                for Schauder fixed point theorem. The previous one has more implications including the uniqueness of the solution, while the later one requires less strict condition to verify. One famous result followed by Banach fixed point theorem is Stampaccia's theorem, which is itself a existence-type theorem. We will use Stampaccia's theorem later so I will write down the theorem below:<br>
+                Let $a(\cdot,\cdot)$ be a bounded coercive bilinear form on a Hilbert space $H$, 
+                <p>
+                </p>
                 <h5>关于学校</h5>
                 <p>当初在申请学校时，心里比较明确之后毕业后会直接找工。所以对学校的考量在于找工方面的支持。仔细研究了各个学校的情况，出于氛围和
                     项目人少，加上一些大藤情节，最后选择了Yale。说实话，受限于教授数量，Yale的课程选择并不丰富，对找工有帮助的课程寥寥可数，也就OOP, OS那几门课。
@@ -244,7 +251,7 @@
 
     <div class="footer-wrap">
         <footer>
-            <span>&copy; 2017 Han You. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal
+            <span>&copy; 2019 Zhen Zhang. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal
                     Mistakes</a> theme.</span>
 
         </footer>
