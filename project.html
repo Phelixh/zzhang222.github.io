@@ -109,6 +109,70 @@
     <h1>Selected Projects</h1>
     <div class="article-wrap">
       <hr />
+      <h3 id="secure-outsourced-middleboxes">High dimensional control with SympNet </h3>
+      <p>
+      We propose a novel neural network method called SympOCNet that applies the Symplectic network to solve high-dimensional optimal control problems with state constraints.
+       We demonstrate that our proposed method can solve a problem with more than 500 dimensions on a single GPU. The proposed method is scalable and has the potential to solve 
+       truly high-dimensional path planning problems in real-time. 
+      <figure>
+          <img class="center" width="70%" src='img/illustration_sympnet.png' alt='architecture' />
+          <figcaption align="center">We use SympNets to map the physical to a latent space where the potentially complex solution paths are stretched to straight lines</figcaption>
+      </figure>
+      Our method can solve the high-dimensional path planning problem efficiently assuming that a physical model is completely known to us. 
+      We are exploring the possibility of combining our method with reinforcement learning models to handle uncertainty in the environments as a future work.
+      <figure>
+          <img class="center" width="70%" src='img/room_256.gif' alt='density' />
+          <figcaption align="center">Path planning of 256 drones: minimizing energy cost while avoiding each other. </figcaption>
+      </figure>
+      T. Meng, <b>Z. Zhang</b>(Co-first author), J. Darbon, G. Karniadakis. (Under review)
+      <br>
+      <hr />
+      
+      <h3 id="secure-outsourced-middleboxes">GENERIC formalism informed neural network </h3>
+      <p>
+      We propose the GENERIC formalism informed neural networks, which exactly satisfy the consistency conditions of thermodynamics, 
+      to facilitate prediction of the evolution of complex processes when the exact form of the governing equation is not readily available.
+      <br>
+      The general equation for non-equilibrium reversible-irreversible coupling (GENERIC) formalism provides a thermodynamically consistent way to characterize the evolutionary structure of molecular systems. It takes the form
+     $\frac{dz}{dt} = L \frac{\delta E}{\delta z} + M \frac{\delta S}{\delta z}$,
+where $E$ and $S$ represent the energy and entropy of the system. $L$ and $M$ are the Poisson and dissipation matrices, which characterize the geometric and dissipation properties of the material in operator form.
+     We design $L$, $M$, $E$, $S$ as neural networks with specific architectures to satisfy the structure and consistency condition of the formalism.
+      <figure>
+          <img class="center" width="70%" src='img/gfinn_arch.png' alt='architecture' />
+          <figcaption align="center">The architecture is inspired by the spectral decomposition of skew-symmetric and positive definite matrices. Based on rigorous approximation theory, we show that our model can 
+          approximate any system that can be described by the GENERIC formalism in a thermodynamic-consistent way.</figcaption>
+      </figure>
+      Our method can also be used to predict the stochastic dynamics of a diffusive particle and preserving the statistical properties better than purely data-driven methods, as can be seen from the figure below.
+      <figure>
+          <img class="center" width="70%" src='img/langevin.png' alt='architecture' />
+          <figcaption align="center">.</figcaption>
+      </figure>
+      <b>Z. Zhang</b>, Y. Shin, G. Karniadakis. <a href="https://arxiv.org/abs/2109.00092">GFINNs: GENERIC Formalism Informed Neural Networks for Deterministic and Stochastic Dynamical Systems.</a> Accepted by Philosophical Transactions of the Royal Society A.
+      <br>
+      <hr />
+      
+      <h3 id="secure-outsourced-middleboxes">Poisson Neural Networks</h3>
+      <p>
+      We propose the Poisson Neural Networks (PNNs) to learn Poisson system and perform long-time
+      integration on such systems which can represent a broad class of dynamic motions. 
+      <figure>
+          <img class="center" width="70%" src='img/architecture_pnn.pdf' alt='architecture' />
+          <figcaption align="center">Architecture of PNN, $\theta$ is a invertible neural network to represent coordinate transformation, $\Phi$ is a symplectic network. </figcaption>
+      </figure>
+      Our new NN for physics, based on rigorous approximation theory can be used for
+      video frame interpolation and long-time prediction of the motion of rigid body.
+      The method is demonstrated successful on benchmark tasks including 
+      predicting the motion of a charged particle in a electromagnetic potential, 
+      solving the nonlinear Schrodinger equation and predicting two-body motion (image data) for long time.
+      <figure>
+          <img class="center" width="70%" src='img/tb.gif' alt='density' />
+          <figcaption align="center">Long time prediction and frame interpolation for two body images. </figcaption>
+      </figure>
+      <br>
+      </p>
+      P. Jin, <b>Z. Zhang</b>, Y. G. Kevrekidis, G. Karniadakis. <a href="https://arxiv.org/abs/2012.03133">Learning Poisson systems and trajectories of autonomous systems via Poisson neural networks.</a> Accepted by IEEE TNNLS.
+      <hr />
+      
       <h3 id="secure-outsourced-middleboxes">Symplectic Networks</h3>
       <p>
       Hamiltonian equations are the governing equations of classical mechanics as well as molecular dynamics. In this project, we proposed the so-called Symplectic Networks(SympNets) to learn the dynamics of arbitrary Hamiltonian equation.
@@ -133,14 +197,15 @@
       Your browser does not support the video tag.
       </video>
       <br>
-      <center>Traing data (left) and perfect prediction (right).</center>
+      <center>Traing data (left) and long-time prediction (right).</center>
       </p>
-      P. Jin, <b>Z. Zhang</b>(Co-first Author), A. Zhu, G. Karniadakis, Y. Tang. SympNets: Intrinsic structure-preserving symplectic networks for identifying Hamiltonian systems. https://arxiv.org/pdf/2001.03750.pdf
+      P. Jin, <b>Z. Zhang</b>(Co-first Author), A. Zhu, G. Karniadakis, Y. Tang. <a href="https://www.sciencedirect.com/science/article/pii/S0893608020303063">SympNets: Intrinsic structure-preserving symplectic networks for identifying Hamiltonian systems.</a> Neural Networks 132. 166-179 (2020)
+      <hr />
       <h3 id="secure-outsourced-middleboxes">Parallel version of a GIS algorithm(REU)</h3>
       <p>
       I spent a summer in the <a href="https://www.jics.utk.edu">Joint Institute for Computational Science</a> at <a href="https://www.utk.edu">UTK</a> and <a href="https://www.ornl.gov">ORNL</a> in year 2016. I proposed a parallel version of the dasymetric mapping algorithm in GIS and implemented it in MPI. The new method effectively improved running efficiency. Check <a href="https://www.jics.utk.edu/csure-reu/csure16/projects">this website</a> for my final report.
       <figure>
-          <img class="center" width="70%" src='img/density.jpg' alt='me' />
+          <img class="center" width="70%" src='img/density.jpg' alt='density' />
           <figcaption align="center">Population Density of Tennessee in One Pic</figcaption>
       </figure>
       </p>
